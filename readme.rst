@@ -1,3 +1,8 @@
+########
+Migration Database
+########
+http://localhost/tugas_uas/migrate
+
 ###################
 What is CodeIgniter
 ###################
