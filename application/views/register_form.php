@@ -8,7 +8,7 @@
       <form method="post">
 
         <div class="divider d-flex align-items-center my-4">
-          <h2 class="text-center fw-bold mx-3 mb-0" data-aos="fade-up">Login Form</h2>
+          <h2 class="text-center fw-bold mx-3 mb-0" data-aos="fade-up">Register Form</h2>
         </div>
 
         <!-- Email input -->
