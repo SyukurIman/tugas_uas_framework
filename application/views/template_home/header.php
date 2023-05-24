@@ -2,7 +2,7 @@
 
     <a href="<?php echo base_url(); ?>" class="logo d-flex align-items-center">
         <img src="<?php echo base_url();?>assets/img/logo.png" alt="">
-        <span>Trans UPN App</span>
+        <span>Budget Tracker</span>
     </a>
 
     <nav id="navbar" class="navbar">

@@ -1,5 +1,14 @@
 <?php 
 
+/**
+ *  @property form_validation $form_validation 
+ *  @property M_Auth $M_Auth
+ *  @property template $template
+ *  @property session $session
+ *  @property input $input
+ */
+
+
 class Auth extends CI_Controller {
   public function index(){
     show_404();

@@ -1,4 +1,10 @@
-<?php defined('BASEPATH') OR exit('No direct script access allowed'); 
+<?php 
+defined('BASEPATH') OR exit('No direct script access allowed'); 
+
+/**
+ *  @property migration $migration 
+ */
+
 class Migrate extends CI_Controller { 
     public function index() { 
         $this->load->library('migration');

@@ -7,7 +7,7 @@
     </a>
   </li><!-- End Dashboard Nav -->
   
-  <li class="nav-item">
+  <!-- <li class="nav-item">
     <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
       <i class="bi bi-journal-text"></i><span>Bus</span><i class="bi bi-chevron-down ms-auto"></i>
     </a>
@@ -23,7 +23,7 @@
         </a>
       </li>
     </ul>
-  </li><!-- End Product Nav -->
+  </li>
 
   <li class="nav-item">
     <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
@@ -42,7 +42,7 @@
       </li>
     </ul>
   </li>
-  <!-- End Customers Nav -->
+  
 
   <li class="nav-item">
     <a class="nav-link collapsed" data-bs-target="#employee-nav" data-bs-toggle="collapse" href="#">
@@ -54,14 +54,13 @@
           <i class="bi bi-circle"></i><span>Add New Kondektur</span>
         </a>
       </li>
-      <!-- ds-employee/office -->
       <li>
         <a href="<?php echo base_url() ?>ds_kondektur">
           <i class="bi bi-circle"></i><span>Data Kondektur</span>
         </a>
       </li>
     </ul>
-  </li><!-- End Employee Nav -->
+  </li> -->
 
   <li class="nav-heading">Pages</li>
 

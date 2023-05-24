@@ -1,6 +1,14 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+/**
+ *  @property form_validation $form_validation 
+ *  @property M_Auth $M_Auth
+ *  @property template $template
+ *  @property session $session
+ *  @property input $input
+ */
+
 class Dashboard_Admin extends CI_Controller {
 
 	public function __construct()
@@ -11,23 +19,12 @@ class Dashboard_Admin extends CI_Controller {
 		if(!$this->M_Auth->current_user()){
 			redirect('login');
 		}
-
-		$this->load->model('M_Trans_UPN');
-		$this->load->model('M_Bus');
-		$this->load->model('M_Driver');
-		$this->load->model('M_Kondektur');
-
-
 	}
+
 	public function index()
 	{
-		$result['data'] = $this->M_Trans_UPN->getAllData();
-		$result['countBus'] = $this->M_Bus->countData();
-		$result['countDriver'] = $this->M_Driver->countData();
-		$result['countKondektur'] = $this->M_Kondektur->countData();
-		$result['grafikData'] = $this->M_Bus->dataGrafik();
-
-		$this->template->render_admin('dashboard', $result);
+		$data['name'] = 'Syukur Iman Attaqwa';
+		$this->template->render_admin('dashboard', $data);
 	}
 	
 }

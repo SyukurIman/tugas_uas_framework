@@ -1,5 +1,9 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+/**
+ *  @property M_Auth $M_Auth
+ *  @property template $template
+ */
 
 class Index_Home extends CI_Controller {
 
