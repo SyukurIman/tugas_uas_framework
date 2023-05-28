@@ -1,7 +1,7 @@
 <?php 
 defined('BASEPATH') OR exit('No direct script access allowed'); 
 
-class Migration_User extends CI_Migration { 
+class Migration_Planner extends CI_Migration { 
     public function up() { 
             $this->dbforge->add_field(array(
             'id' => array(
@@ -10,38 +10,32 @@ class Migration_User extends CI_Migration {
                     'unsigned' => TRUE,
                     'auto_increment' => TRUE
             ),
-            'name' => array(
+            'id_user' => array(
+                'type' => 'INT',
+                'constraint' => '100'
+             ),
+            'name_bill' => array(
                     'type' => 'VARCHAR',
                     'constraint' => '100'
             ),
-            'email' => array(
-                    'type' => 'VARCHAR',
+            'amount_money' => array(
+                    'type' => 'INT',
                     'constraint' => '100'
             ),
-            'username' => array(
+            'status' => array(
                 'type' => 'VARCHAR',
                 'constraint' => '100'
             ),
-            'password' => array(
-                'type' => 'VARCHAR',
-                'constraint' => '255'
-            ),
-            'avatar' => array(
-                'type' => 'VARCHAR',
-                'constraint' => '255',
-                'null' => TRUE
-            ),
-            'created_at datetime default current_timestamp',
-            'login_at' => array(
+            'date' => array(
                 'type' => 'TIMESTAMP',
             ),
         ));
         $this->dbforge->add_key('id', TRUE);
-        $this->dbforge->create_table('user');
+        $this->dbforge->create_table('planner');
     }
 
     public function down()
     {
-        $this->dbforge->drop_table('user');
+        $this->dbforge->drop_table('planner');
     }
 }

@@ -3,12 +3,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <!-- ======= Hero Section ======= -->
 <section id="hero" class="hero d-flex align-items-center">
+	
 
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 d-flex flex-column justify-content-center">
-				<h1 data-aos="fade-up">We offer modern solutions for growing your business</h1>
-				<h2 data-aos="fade-up" data-aos-delay="400">We are team of talented designers making websites with Bootstrap</h2>
+				<h1 data-aos="fade-up">Take Control of Your Finances with BudgetTracker</h1>
+				<h2 data-aos="fade-up" data-aos-delay="400">Jangan biarkan keuangan menjadi beban, mulailah mengelola dengan BudgetTracker hari ini !</h2>
 				<div data-aos="fade-up" data-aos-delay="600">
 					<div class="text-center text-lg-start">
 						<a href="<?php echo base_url()?>dashboard" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
