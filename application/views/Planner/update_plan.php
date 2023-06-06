@@ -2,14 +2,13 @@
   <h1>Add New Driver</h1>
   <nav>
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="<?php echo base_url()?>ds_plan">Planning</a></li>
-      <li class="breadcrumb-item active">Update Plan</li>
+      <li class="breadcrumb-item"><a href="<?php echo base_url()?>ds_plan">Planner</a></li>
+      <li class="breadcrumb-item active">Add Progress Plan</li>
     </ol>
   </nav>
 </div><!-- End Page Title -->
 
 <section class="section dashboard">
-    <a class="" href="<?php echo base_url()?>ds_plan">< Kembali</a>
   <form action="<?php echo base_url()?>ds_plan/update" method="post">
   <div class="mb-3">
     <label class="form-label" for="amount_money">Total Uang Masuk</label>
@@ -20,6 +19,7 @@
 
   <div class="mb-3">
     <button class="btn btn-primary" type="submit">Save</button>
+    <a class="btn btn-secondary" href="<?php echo base_url()?>ds_plan">Kembali</a>
   </div>
   </form>
 </section>
