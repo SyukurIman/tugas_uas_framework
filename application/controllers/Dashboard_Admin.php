@@ -23,7 +23,7 @@ class Dashboard_Admin extends CI_Controller {
 
 	public function index()
 	{
-		$data['name'] = 'Syukur Iman Attaqwa';
+		$data['name'] = $this->M_Auth->current_user()->name;
 		$this->template->render_admin('dashboard', $data);
 	}
 	

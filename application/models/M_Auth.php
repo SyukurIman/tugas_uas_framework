@@ -31,7 +31,7 @@ class M_Auth extends CI_Model{
 	$this->db->where('email', $data['email'])->or_where('username', $data['username']);
 	$query = $this->db->get($this->_table);
     $user = $query->row();
-	var_dump($data_user);
+	var_dump($user);
 
     if ($user) {
       return false;
@@ -51,7 +51,7 @@ class M_Auth extends CI_Model{
     $this->_update_last_login($user->id);
 
     return $this->session->has_userdata(self::SESSION_KEY);
-}
+	}
 
 
   public function login($username, $password){

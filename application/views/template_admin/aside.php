@@ -62,6 +62,24 @@
     </ul>
   </li> -->
 
+  <li class="nav-item">
+    <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+      <i class="bi bi-layout-text-window-reverse"></i><span>Planner</span><i class="bi bi-chevron-down ms-auto"></i>
+    </a>
+    <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+      <li>
+        <a href="<?php echo base_url() ?>ds_plan/add">
+          <i class="bi bi-circle"></i><span>Add New Plan Money</span>
+        </a>
+      </li>
+      <li>
+        <a href="<?php echo base_url() ?>ds_plan">
+          <i class="bi bi-circle"></i><span>Data Planning </span>
+        </a>
+      </li>
+    </ul>
+  </li>
+
   <li class="nav-heading">Pages</li>
 
   <li class="nav-item">

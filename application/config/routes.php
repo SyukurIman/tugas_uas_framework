@@ -57,22 +57,12 @@ $route['login'] = 'auth/login';
 $route['logout'] = 'auth/logout';
 $route['register'] = 'auth/registration';
 
-// Buss Router
-$route['ds_bus'] = 'bus';
-$route['ds_bus/add'] = 'bus/add_bus';
-$route['ds_bus/edit'] = 'bus/edit_bus';
-
-// Driver Router
-$route['ds_driver'] = 'driver';
-$route['ds_driver/add'] = 'driver/add_driver';
-$route['ds_driver/edit'] = 'driver/edit_driver';
-$route['ds_driver/penghasilan'] = 'driver/penghasilan_driver';
-
-// Kondektur Router
-$route['ds_kondektur'] = 'kondektur';
-$route['ds_kondektur/add'] = 'kondektur/add_kondektur';
-$route['ds_kondektur/edit'] = 'kondektur/edit_kondektur';
-$route['ds_kondektur/penghasilan'] = 'kondektur/penghasilan_kondektur';
+// Planner Router
+$route['ds_plan'] = 'planner';
+$route['ds_plan/add'] = 'planner/add_planner';
+$route['ds_plan/edit'] = 'planner/edit_planner';
+$route['ds_plan/update'] = 'planner/update_planner';
+$route['ds_plan/history'] = 'planner/history_planner';
 
 
 $route['translate_uri_dashes'] = FALSE;
