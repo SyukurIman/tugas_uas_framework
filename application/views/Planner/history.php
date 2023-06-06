@@ -2,8 +2,8 @@
   <h1>Dashboard</h1>
   <nav>
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="<?php echo base_url()?>ds_plan">Plannig</a></li>
-      <li class="breadcrumb-item active">Dashboard</li>
+      <li class="breadcrumb-item"><a href="<?php echo base_url()?>ds_plan">Planner</a></li>
+      <li class="breadcrumb-item active">History Plan</li>
     </ol>
   </nav>
 </div><!-- End Page Title -->
@@ -22,20 +22,22 @@
           </tr>
         </thead>
         <tbody>
-          <?php $index = 1; $total = 0?>
-          <?php foreach ($history_plan as $key => $dataList) : ?>
-          <tr >
-            <th scope="col" ><a href="#">#<?php echo $index++ ?></a></th>
-            <td scope="col">Rp. <?php echo number_format((intval($dataList->amount_money)/1000), 3)?></td>
-            <td scope="col"><?php echo $dataList->tanggal?></td>
-            <?php  $total += intval($dataList->amount_money)?>
-          </tr>
-          <?php endforeach ?>
-          <tr>
-            <th scope="col" ><a href="#">#<?php echo $index++ ?></a></th>
-            <td scope="col" >Total Keseluruhan</td>
-            <td scope="col" >Rp. <?php echo number_format(($total/1000), 3) ?></td>
-          </tr>
+            <?php $index = 1; $total = 0?>
+            <?php if($history_plan): ?>
+                <?php foreach ($history_plan as $key => $dataList) : ?>
+                <tr >
+                    <th scope="col" ><a href="#">#<?php echo $index++ ?></a></th>
+                    <td scope="col">Rp. <?php echo number_format((intval($dataList->amount_money)/1000), 3)?></td>
+                    <td scope="col"><?php echo $dataList->tanggal?></td>
+                    <?php  $total += intval($dataList->amount_money)?>
+                </tr>
+                <?php endforeach ?>
+                <tr>
+                    <th scope="col" ><a href="#">#<?php echo $index++ ?></a></th>
+                    <td scope="col" >Total Keseluruhan</td>
+                    <td scope="col" >Rp. <?php echo number_format(($total/1000), 3) ?></td>
+                </tr>
+            <?php endif ?>
         </tbody>
       </table>
     </div>

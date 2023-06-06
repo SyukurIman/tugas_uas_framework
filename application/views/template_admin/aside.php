@@ -69,7 +69,7 @@
     <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
       <li>
         <a href="<?php echo base_url() ?>ds_plan/add">
-          <i class="bi bi-circle"></i><span>Add New Plan Money</span>
+          <i class="bi bi-circle"></i><span>Add New Plan</span>
         </a>
       </li>
       <li>

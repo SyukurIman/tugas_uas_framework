@@ -38,15 +38,16 @@ class Planner extends CI_Controller {
         }
         $data['plan'] = $this->M_Planner->getData( $this->M_Auth->current_user()->id);
 
-        foreach ($data['plan']as $key => $plan) {
-            $date = date("m-d-Y", strtotime($plan->target_tanggal));
-            echo $key;
-            if ($date == date("m-d-Y") || $plan->target_uang == $plan->uang_now) {
-                $data['plan'][$key]->status = 'Telah Selesai';
-                $this->M_Planner->edit($data['plan'][$key], $data['plan'][$key]->id);
+        if ($data['plan']) {
+            foreach ($data['plan']as $key => $plan) {
+                $date = date("m-d-Y", strtotime($plan->target_tanggal));
+                if ($date == date("m-d-Y") || $plan->target_uang == $plan->uang_now) {
+                    $data['plan'][$key]->status = 'Telah Selesai';
+                    $this->M_Planner->edit($data['plan'][$key], $data['plan'][$key]->id);
+                }
             }
         }
-
+        
         $data['name'] = $this->M_Auth->current_user()->name;
 		$this->template->render_admin('Planner/show', $data);
     }

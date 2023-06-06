@@ -2,7 +2,7 @@
   <h1>Dashboard</h1>
   <nav>
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="<?php echo base_url()?>ds_plan">Plannig</a></li>
+      <li class="breadcrumb-item"><a href="<?php echo base_url()?>ds_plan">Planner</a></li>
       <li class="breadcrumb-item active">Dashboard</li>
     </ol>
   </nav>
@@ -25,31 +25,34 @@
             <th scope="col">Action</th>
           </tr>
         </thead>
-        <tbody>
-          <?php $index = 1;?>
-          <?php foreach ($plan as $key => $dataList) : ?>
-          <tr >
-            <th scope="col" ><a href="#">#<?php echo $index++ ?></a></th>
-            <td scope="col"><?php echo $dataList->name_bill?></td>
-            <td scope="col">Rp. <?php echo number_format((intval($dataList->target_uang)/1000), 3)?></td>
-            <td scope="col">Rp. <?php echo number_format((intval($dataList->uang_now)/1000), 3)?></td>
-            <td scope="col"><?php echo $dataList->status?></td>
-            <td scope="col"><?php echo date("d-m-Y", strtotime($dataList->target_tanggal))?></td>
-    
+        <tbody class="align-middle">
+            <?php $index = 1;?>
+            <?php if ($plan) :?>
+                <?php foreach ($plan as $key => $dataList) : ?>
+                <tr >
+                    <th scope="col" ><a href="#">#<?php echo $index++ ?></a></th>
+                    <td scope="col"><?php echo $dataList->name_bill?></td>
+                    <td scope="col">Rp. <?php echo number_format((intval($dataList->target_uang)/1000), 3)?></td>
+                    <td scope="col">Rp. <?php echo number_format((intval($dataList->uang_now)/1000), 3)?></td>
+                    <td scope="col"><?php echo $dataList->status?></td>
+                    <td scope="col"><?php echo date("d-m-Y", strtotime($dataList->target_tanggal))?></td>
+            
 
-            <td scope="col">
-                <?php if ($dataList->status == 'Telah Selesai') :?>
-                    <a class="btn btn-light" style="font-size: smaller;" name="update">Add Progress</a>
-                <?php else: ?>
-                    <a class="btn btn-success" style="font-size: smaller;" href="<?php echo base_url() ?>ds_plan/update?id=<?php echo $dataList->id ?>" value="" name="update"  >Add Progress</a>
-                <?php endif?>
+                    <td scope="col">
+                        <?php if ($dataList->status == 'Telah Selesai') :?>
+                            <a class="btn btn-light" style="font-size: smaller;" name="update">Add Progress</a>
+                        <?php else: ?>
+                            <a class="btn btn-success" style="font-size: smaller;" href="<?php echo base_url() ?>ds_plan/update?id=<?php echo $dataList->id ?>" value="" name="update"  >Add Progress</a>
+                        <?php endif?>
 
-                <a class="btn btn-info" style="font-size: smaller;" href="<?php echo base_url() ?>ds_plan/history?id=<?php echo $dataList->id ?>" value="" name="edit"  >History Progress</a>
-                <a class="btn btn-secondary" style="font-size: smaller;" href="<?php echo base_url() ?>ds_plan/edit?id=<?php echo $dataList->id ?>" value="" name="edit"  >Edit</a>
-              <a class="btn btn-danger" style="font-size: smaller; " href="<?php echo base_url() ?>ds_plan?delete_id=<?php echo $dataList->id ?>" value="<?php echo $dataList->id ?>" name="delete">Delete</a>
-            </td>
-          </tr>
-          <?php endforeach ?>
+                        <a class="btn btn-info" style="font-size: smaller;" href="<?php echo base_url() ?>ds_plan/history?id=<?php echo $dataList->id ?>" value="" name="edit"  >History Progress</a>
+                        <a class="btn btn-secondary" style="font-size: smaller;" href="<?php echo base_url() ?>ds_plan/edit?id=<?php echo $dataList->id ?>" value="" name="edit"  >Edit</a>
+                    <a class="btn btn-danger" style="font-size: smaller; " href="<?php echo base_url() ?>ds_plan?delete_id=<?php echo $dataList->id ?>" value="<?php echo $dataList->id ?>" name="delete">Delete</a>
+                    </td>
+                </tr>
+                <?php endforeach ?>
+            <?php endif ?>
+        
         </tbody>
       </table>
     </div>

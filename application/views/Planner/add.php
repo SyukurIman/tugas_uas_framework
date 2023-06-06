@@ -2,7 +2,7 @@
   <h1>Add New Driver</h1>
   <nav>
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="<?php echo base_url()?>ds_driver">Bus</a></li>
+      <li class="breadcrumb-item"><a href="<?php echo base_url()?>ds_plan">Planner</a></li>
       <li class="breadcrumb-item active">Add New Plan</li>
     </ol>
   </nav>
