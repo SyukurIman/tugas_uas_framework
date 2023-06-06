@@ -1,5 +1,5 @@
 <div class="pagetitle">
-  <h1>Add New Driver</h1>
+  <h1>Add Progress Plan</h1>
   <nav>
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="<?php echo base_url()?>ds_plan">Planner</a></li>
