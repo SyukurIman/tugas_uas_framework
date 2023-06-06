@@ -10,7 +10,7 @@
 
 <section class="section card dashboard">
   <div class="card-body">
-    <h5 class="card-title">Data Driver</h5>  
+    <h5 class="card-title">Data Perencanaan</h5>  
 
     <div class="w-100 overflow-scroll">
       <table class="table table-borderless datatable align-middle" style="width: 100%; min-width: none;">
