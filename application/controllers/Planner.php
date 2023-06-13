@@ -41,8 +41,11 @@ class Planner extends CI_Controller {
         if ($data['plan']) {
             foreach ($data['plan']as $key => $plan) {
                 $date = date("m-d-Y", strtotime($plan->target_tanggal));
-                if ($date == date("m-d-Y") || $plan->target_uang == $plan->uang_now) {
+                if ($date <= date("m-d-Y") || $plan->target_uang <= $plan->uang_now) {
                     $data['plan'][$key]->status = 'Telah Selesai';
+                    $this->M_Planner->edit($data['plan'][$key], $data['plan'][$key]->id);
+                } else {
+                    $data['plan'][$key]->status = 'Sedang Berlangsung';
                     $this->M_Planner->edit($data['plan'][$key], $data['plan'][$key]->id);
                 }
             }
