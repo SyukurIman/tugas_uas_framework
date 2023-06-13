@@ -37,7 +37,7 @@ class FinancialRecords extends CI_Controller
                 $result['msg'] = 'Delete Failed';
             }
         }
-        $data['records'] = $this->M_FinancialRecords->getRecords();
+        $data['records'] = $this->M_FinancialRecords->getRecords($this->M_Auth->current_user()->id);
         $data['name'] = $this->M_Auth->current_user()->name;
         $this->template->render_admin('FinancialRecords/show', $data);
     }
@@ -50,7 +50,7 @@ class FinancialRecords extends CI_Controller
             $type = $this->input->post('type');
             $amount = $this->input->post('amount');
             $description = $this->input->post('description');
-            $this->M_FinancialRecords->addRecord($type, $amount, $description, $date);
+            $this->M_FinancialRecords->addRecord($type, $amount, $description, $date, $this->M_Auth->current_user()->id);
 
             $data['name'] = $this->M_Auth->current_user()->name;
             $this->template->render_admin('FinancialRecords/add', $data);

@@ -21,15 +21,15 @@
           <div class="card info-card sales-card">
 
             <div class="card-body">
-              <h5 class="card-title">Pengeluaran <span>| Now</span></h5>
+              <h5 class="card-title">Total Pengeluaran <span>| Now</span></h5>
 
               <div class="d-flex align-items-center">
                 <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                   <i class="bi bi-cart"></i>
                 </div>
                 <div class="ps-3">
-                  <h6</h6>
-                  <!-- <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span> -->
+                  <h6>Rp. <?php echo number_format((intval($pengeluaran)/1000), 3)  ?></h6>
+                  <span class="text-success small pt-1 fw-bold">---</span> <span class="text-muted small pt-2 ps-1">----</span>
 
                 </div>
               </div>
@@ -43,15 +43,15 @@
           <div class="card info-card revenue-card">
 
             <div class="card-body">
-              <h5 class="card-title">Pemasukkan <span>| Now</span></h5>
+              <h5 class="card-title">Total Pemasukkan <span>| Now</span></h5>
 
               <div class="d-flex align-items-center">
                 <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                   <i class="bi bi-pin-map-fill"></i>
                 </div>
                 <div class="ps-3">
-                  <h6>0</h6>
-                  <!-- <span class="text-success small pt-1 fw-bold">8%</span> <span class="text-muted small pt-2 ps-1">increase</span> -->
+                  <h6>Rp. <?php echo number_format((intval($pemasukkan)/1000), 3)  ?></h6>
+                  <span class="text-success small pt-1 fw-bold">---</span> <span class="text-muted small pt-2 ps-1">----</span>
 
                 </div>
               </div>
@@ -66,15 +66,15 @@
           <div class="card info-card customers-card">
 
             <div class="card-body">
-              <h5 class="card-title">Total Planning <span>| Now</span></h5>
+              <h5 class="card-title">Total Uang <span>| Now</span></h5>
 
               <div class="d-flex align-items-center">
                 <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                   <i class="bi bi-people"></i>
                 </div>
                 <div class="ps-3">
-                  <h6>0</h6>
-                  <span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">decrease</span>
+                  <h6>Rp. <?php echo number_format((intval($total_uang )/1000), 3) ?></h6>
+                  <span class="text-danger small pt-1 fw-bold">---</span> <span class="text-muted small pt-2 ps-1">----</span>
                 </div>
               </div>
             </div>
