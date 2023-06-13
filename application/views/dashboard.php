@@ -21,7 +21,7 @@
           <div class="card info-card sales-card">
 
             <div class="card-body">
-              <h5 class="card-title">Bus <span>| Now</span></h5>
+              <h5 class="card-title">Pengeluaran <span>| Now</span></h5>
 
               <div class="d-flex align-items-center">
                 <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
@@ -29,7 +29,7 @@
                 </div>
                 <div class="ps-3">
                   <h6</h6>
-                  <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span>
+                  <!-- <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span> -->
 
                 </div>
               </div>
@@ -43,7 +43,7 @@
           <div class="card info-card revenue-card">
 
             <div class="card-body">
-              <h5 class="card-title">Driver <span>| Now</span></h5>
+              <h5 class="card-title">Pemasukkan <span>| Now</span></h5>
 
               <div class="d-flex align-items-center">
                 <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
@@ -51,7 +51,7 @@
                 </div>
                 <div class="ps-3">
                   <h6>0</h6>
-                  <span class="text-success small pt-1 fw-bold">8%</span> <span class="text-muted small pt-2 ps-1">increase</span>
+                  <!-- <span class="text-success small pt-1 fw-bold">8%</span> <span class="text-muted small pt-2 ps-1">increase</span> -->
 
                 </div>
               </div>

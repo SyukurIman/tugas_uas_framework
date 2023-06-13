@@ -69,6 +69,15 @@ class M_Planner extends CI_Model
     }
     return false;
   }
+  public function get_name_bill($id_plan)
+  {
+      $sql = 'SELECT `name_bill` FROM planner WHERE id = ?';
+      $data = $this->db->query($sql, $id_plan)->result();
+      if (!$data) {
+          return false;
+      }
+      return $data;
+  }
 }
 
 

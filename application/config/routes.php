@@ -64,5 +64,8 @@ $route['ds_plan/edit'] = 'planner/edit_planner';
 $route['ds_plan/update'] = 'planner/update_planner';
 $route['ds_plan/history'] = 'planner/history_planner';
 
+$route['ds_fins'] = 'financialRecords';
+$route['ds_fins/add'] = 'financialRecords/addRecord';
+$route['ds_fins/edit'] = 'financialRecords/editRecord';
 
 $route['translate_uri_dashes'] = FALSE;

@@ -80,6 +80,24 @@
     </ul>
   </li>
 
+  <li class="nav-item">
+    <a class="nav-link collapsed" data-bs-target="#tables-nav-2" data-bs-toggle="collapse" href="#">
+      <i class="bi bi-layout-text-window-reverse"></i><span>Financial Records</span><i class="bi bi-chevron-down ms-auto"></i>
+    </a>
+    <ul id="tables-nav-2" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+      <li>
+        <a href="<?php echo base_url() ?>ds_fins/add">
+          <i class="bi bi-circle"></i><span>Add New Record</span>
+        </a>
+      </li>
+      <li>
+        <a href="<?php echo base_url() ?>ds_fins">
+          <i class="bi bi-circle"></i><span>Data Financial </span>
+        </a>
+      </li>
+    </ul>
+  </li>
+
   <li class="nav-heading">Pages</li>
 
   <li class="nav-item">

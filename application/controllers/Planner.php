@@ -1,4 +1,7 @@
 <?php
+
+use function PHPSTORM_META\type;
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
@@ -7,6 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  *  @property template $template
  *  @property input $input
  *  @property M_Planner $M_Planner
+ *  @property M_FinancialRecords $M_FinancialRecords
  */
 
 
@@ -18,6 +22,7 @@ class Planner extends CI_Controller {
 
 		$this->load->model('M_Auth');
         $this->load->model('M_Planner');
+        $this->load->model('M_FinancialRecords'); 
 		if(!$this->M_Auth->current_user()){
 			redirect('login');
 		}
@@ -84,6 +89,14 @@ class Planner extends CI_Controller {
             $data = $this->input->post();
 
             $respon = $this->M_Planner->update_plan($data);
+
+            $amount = $data['amount_money'];
+            $type = 'Pemasukkan';
+            $date_now = date("D M d, Y G:i");
+            $description = $this->M_Planner->get_name_bill($data['id_plan']);
+
+            $respon = $this->M_FinancialRecords->addRecord($type, $amount, $description[0]->name_bill, $date_now);
+            
             if ($respon == true) {
                 $result['msg'] = 'Update Success';
 
@@ -135,7 +148,7 @@ class Planner extends CI_Controller {
         $this->template->render_admin('Planner/history', $result);
     }
 
-
+    
 }
 
 ?>
