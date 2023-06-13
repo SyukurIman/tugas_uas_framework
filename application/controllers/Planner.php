@@ -92,8 +92,8 @@ class Planner extends CI_Controller {
 
             $amount = $data['amount_money'];
             $type = 'Pemasukkan';
-            $date_now = date("D M d, Y G:i");
-            $description = $this->M_Planner->get_name_bill($data['id_plan']);
+            $date_now = date('d-m-Y');
+            $description = $this->M_Planner->get_data_by_id($data['id_plan']);
 
             $respon = $this->M_FinancialRecords->addRecord($type, $amount, $description[0]->name_bill, $date_now, $this->M_Auth->current_user()->id);
             

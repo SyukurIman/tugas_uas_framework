@@ -98,6 +98,13 @@
     </ul>
   </li>
 
+  <li class="nav-item">
+    <a class="nav-link collapsed" href="<?php echo base_url() ?>graph">
+      <i class="bi bi-grid"></i>
+      <span>Grafik</span>
+    </a>
+  </li>
+
   <li class="nav-heading">Pages</li>
 
   <li class="nav-item">

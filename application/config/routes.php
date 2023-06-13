@@ -56,6 +56,7 @@ $route['dashboard'] = 'Dashboard_Admin';
 $route['login'] = 'auth/login';
 $route['logout'] = 'auth/logout';
 $route['register'] = 'auth/registration';
+$route['report/download'] = 'report/download';
 
 // Planner Router
 $route['ds_plan'] = 'planner';
